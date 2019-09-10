@@ -1,0 +1,19 @@
+<ul>  
+<li *ngFor = "let tid of tasks">
+    {{tid.taskName}}
+    &nbsp;
+    {{tid.parentTask}}
+    &nbsp;
+    {{tid.priorityFrom}}
+    &nbsp;
+    {{tid.priorityTo}}
+    &nbsp;
+    {{tid.startDate | date: 'dd/MM/yyyy'}}
+    &nbsp;
+    {{tid.endDate | date: 'dd/MM/yyyy'}}
+    &nbsp;
+    <button (click) = "editTask(tid)"> Edit </button>
+    &nbsp;
+    <button (click) = "deleteTask(tid.id)"> Delete </button>
+</li>      
+</ul>

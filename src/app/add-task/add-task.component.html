@@ -1,0 +1,45 @@
+<form #taskCreation = "ngForm" (ngSubmit) = "createTask(taskCreation.value)">
+    <div>
+        <label>
+            Task:
+        </label>
+        <input type="text" name = "taskName" [(ngModel)] = "taskName">
+    </div>
+    &nbsp; &nbsp;
+    <div>
+        <label>
+            Parent Task:
+        </label>
+        <input type="text" name = "parentTask" [(ngModel)] = "parentTask">
+    </div>
+    <br>
+    <div>
+        <label>
+            Priority From:
+        </label>
+        <input type="text" name = "priorityFrom" size = "8" [(ngModel)] = "priorityFrom">
+    </div>
+    &nbsp; &nbsp;
+    <div>
+        <label>
+            Priority To:
+        </label>
+        <input type="text" name = "priorityTo" size = "8" [(ngModel)] = "priorityTo">
+    </div>
+    &nbsp; &nbsp;
+    <div>
+        <label>
+            Start Date:
+        </label>
+        <input type = "date" name = "startDate" size = "8" [(ngModel)] = "startDate">
+    </div>
+    &nbsp; &nbsp;
+    <div>
+        <label>
+            End Date:
+        </label>
+        <input type = "date" name = "endDate" size = "8" [(ngModel)] = "endDate">
+    </div>
+    <br>
+    <button type = "submit"> Create Task </button>
+</form>
